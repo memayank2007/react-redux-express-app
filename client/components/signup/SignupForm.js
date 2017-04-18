@@ -20,8 +20,7 @@ class SignupForm extends React.Component {
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.checkUserExists = this.checkUserExists.bind(this);
-  }
+   }
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -75,8 +74,7 @@ class SignupForm extends React.Component {
           error={errors.username}
           label="Username"
           onChange={this.onChange}
-          checkUserExists={this.checkUserExists}
-          value={this.state.username}
+           value={this.state.username}
           field="username"
         />
 
@@ -84,7 +82,6 @@ class SignupForm extends React.Component {
           error={errors.email}
           label="Email"
           onChange={this.onChange}
-          checkUserExists={this.checkUserExists}
           value={this.state.email}
           field="email"
         />
@@ -133,9 +130,8 @@ class SignupForm extends React.Component {
 
 SignupForm.propTypes = {
   userSignupRequest: React.PropTypes.func.isRequired,
-  addFlashMessage: React.PropTypes.func.isRequired,
-  isUserExists: React.PropTypes.func.isRequired
-}
+  addFlashMessage: React.PropTypes.func.isRequired
+ }
 
 SignupForm.contextTypes = {
   router: React.PropTypes.object.isRequired
